@@ -1,0 +1,258 @@
+\documentclass[10pt]{article}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\usepackage[left=.5in,top=0.25in,right=0.5in,bottom=0.25in]{geometry}
+% \usepackage[scale=0.95]{tgschola}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fontawesome}
+\usepackage{graphicx}
+
+% ----------- Config ------------
+
+\input{glyphtounicode}
+
+\hypersetup {
+    % pdfborderstyle={/S/U/W 1}, % underline links instead of boxes
+    % urlbordercolor=black        % color of external links
+    colorlinks   = true, %Colours links instead of ugly boxes
+    urlcolor     = blue, %Colour for external hyperlinks
+}
+
+\setlist{nosep}
+\raggedright
+
+\pdfgentounicode=1
+
+\graphicspath{ {./img} }
+
+% ----------- End of Config -----------
+
+% ----------- Definitions -----------
+    
+\newcommand{\tinyBulletSep} { \vspace{1.2mm} }
+
+\newcommand{\bulletSep} { \vspace{2.2mm} }
+
+\newcommand{\sectionSep} { \vspace{3mm} }
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-15pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} {
+        \fontfamily{qcs}\selectfont \large \scshape #1
+    }}
+    \vspace*{-6pt} \lineunder
+    \vspace{0.5mm}
+}
+
+\newcommand{\educationItem}[5]{
+    \textbf{#1}\hfill #2\\
+    #3, \textit{#4} \hfill #5\\
+}
+
+\newcommand{\experienceItem}[5]{
+    \textbf{#1} \hfill #2 \\
+    \textit{#3} \hfill #4 \\
+    \begin{itemize}
+        #5
+    \end{itemize}
+}
+
+\newcommand{\volunteerItem}[5]{
+    \textbf{#1} -- \textit{#2} \hfill #3 \\
+    \begin{itemize}
+        #4
+    \end{itemize}
+}
+
+\newcommand{\projectItem}[5]{
+    {\textbf{#1}} {(\sl #2)}\hfill
+    \ifx&#3&%
+    % #3 is empty
+    \href{#4}{Github}\\
+    \else
+    % #3 is nonempty
+    \href{#3}{Preview} | \href{#4}{Github}\\
+    \fi
+    \begin{itemize}
+        #5
+    \end{itemize}
+}
+
+\newcommand{\image}[1]{
+    \begingroup\normalfont
+    \Large
+    \includegraphics[height=\fontcharht\font`\B]{#1.png}%
+    \endgroup
+}
+
+
+% ----------- End of definitions -----------
+
+\begin{document}
+
+
+% ----------- Profile -----------
+
+\begin{center}
+    {\Huge \scshape \fontfamily{qcs}\selectfont Aditya Tiwari}\\
+    \vspace{0.5mm}
+    \faPhone~+91 83192 34337
+    $\cdot$
+    \href{mailto: aditya.tiwari1154@gmail.com}{aditya.tiwari1154@gmail.com}
+    $\cdot$
+    \href{https://www.linkedin.com/in/aditya-tiwari-438087203/}{Linked\faLinkedinSquare~}
+\end{center}
+
+\vspace{-2mm}
+
+% ----------- Education -----------
+
+\header{Education}
+
+\educationItem{National Institute of Technology, Hamirpur}{Hamirpur}{Bachelor of Technology, Computer Science \& Enginnering}{CGPA: 8.9}{Dec 2020 - Present}
+\bulletSep
+
+\educationItem{Shri Krishna Public School}{Indore}{Higher Secondary (12th)}{Percentage: 82.6}{Apr 2018 - Mar 2019}
+\sectionSep
+
+% ----------- Work Experience -----------
+
+% \header{Work Experience}
+
+% \experienceItem{Coding Ninjas}{Remote}{Technical Content Writer Intern}{Mar 2023 - Jun 2023}{
+%     \item Created \textbf{high-quality} content covering a wide range of programming languages, frameworks, and tools.
+%     \item Authored and edited \textbf{technical blog posts, tutorials}, etc., aimed at helping students learn and improve.
+% }
+% \bulletSep
+
+% \experienceItem{Coding Shuttle}{Remote}{Problem Setter}{Feb 2023 - Mar 2023}{
+%     \item Generated test cases and optimal solutions for problems based on \textbf{Data Structures and Algorithms}.
+% }
+% \sectionSep
+
+% ----------- Projects -----------
+
+\header{Projects}
+
+\projectItem{Color Generator}{React Framework}{https://color-generator-a0753a.netlify.app/}{https://github.com/devloper016/Color-Generator}{
+    \item Search Color with hexadecimal codes, provides same color in different
+shades.Directly copy the hexadecimal codes of different shades in clipboard to
+use in other projects.
+}
+\bulletSep
+
+\projectItem{Semester Detail}{Nextjs, TailwindCSS}{https://sem-detail-app.vercel.app/}{https://github.com/p-chhabra/Semester-Detail-Website/tree/dev}{
+    \item Semester Detail Website is an online platform where a student can access the
+details related to different courses of all semesters with comfort and ease. It
+contains information on various fronts for all courses in a user friendly and easy
+to navigate manner:
+
+    \item Implemented animations and media queries to enhance the user experience.
+}\bulletSep
+
+\projectItem{Lorem-Ispum}{React, CSS3}{https://lorem-ispum.netlify.app/}{https://github.com/devloper016/Lorem-Ispum}{
+    \item Select the number of the fill in paragraph you need in project and it will return meaningful Lorem Paragraphs.
+    \item Used React-Toastify library for notifications and implemented media quries.
+}
+\bulletSep
+
+\projectItem{Paint Application}{C++, Graphics Library}{}{https://github.com/devloper016/paint/tree/main}{
+    \item Created a comprehensive paint application with {user-friendly graphical interface}.
+    \item \textbf{Tools}: Brush, Flood Fill, Rectangle, Circle, Line, etc.
+}
+\bulletSep
+
+\sectionSep
+
+% ----------- Achievements -----------
+\header{Achievements}
+\textbf{CodeChef} - \textbf{\href{https://www.codechef.com/users/aditya_016}{aditya\_016}}
+\begin{itemize}
+    \item \textbf{3 star} | Maximum Rating: \textbf{1759}
+    \item Ranked \textbf{\href{https://www.codechef.com/rankings/MARCH222C?itemsPerPage=100&order=asc&page=1&sortBy=rank}{43th}} globally out of \textbf{3600+} participants \textbf{in March Long-Off 2022 Div-3}.
+    \item Ranked \textbf{\href{https://www.codechef.com/rankings/START31C?itemsPerPage=100&order=asc&page=1&sortBy=rank}{585th}} globally out of \textbf{3200+} participants \textbf{CodeChef Starters 31 Div-3}.
+\end{itemize}
+\tinyBulletSep
+
+\textbf{Codeforces} - \textbf{\href{https://codeforces.com/profile/Sergeant07}{aditya\_016}}
+\begin{itemize}
+    \item \textbf{NewBie} | Maximum Rating: \textbf{1121}
+    \item Ranked \textbf{\href{https://codeforces.com/contest/1747/standings/participant/143507811#p143507811}{5058}} globally  \textbf{in Codeforces Round 832}.
+\end{itemize}
+\tinyBulletSep
+
+ \textbf{Leetcode} - \textbf{\href{https://leetcode.com/Aditya_02/}{Aditya\_02}}
+\begin{itemize}
+    \item Top \textbf{20.7\%} (Max Rating - \textbf{1610})
+    \item Solve more than 650 Questions.
+\end{itemize}
+\tinyBulletSep
+
+ \textbf{Academic} 
+\begin{itemize}
+    \item Secured \textbf{99.15} percentile (Rank-9928) rank in JEE MAIN 2020.
+    \item Cleared \textbf{JEE Advance} 2020.
+\end{itemize}
+
+\tinyBulletSep
+\sectionSep
+
+% ----------- Skills -----------
+
+\header{Skills}
+% [t] option means top
+\begin{minipage}[t]{0.6\textwidth}
+    % Column 1
+    % , Go, MATLAB
+    \textbf{Languages:} C++, Python, Javascript\\
+    \textbf{Databases:} MongoDB\\
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.33\textwidth}
+    % Column 2
+    \textbf{Frameworks:} React, Node, Express\\
+    \textbf{Tools:} Git, GNU/Linux
+\end{minipage}
+\sectionSep
+
+% ----------- Coursework -----------
+\header{Coursework}
+\begin{minipage}[t]{0.4\textwidth}
+    % Column 1
+    Data Structures \& Algorithms\\
+    Database Management Systems\\
+    Computer Networks
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.25\textwidth}
+    % Column 2
+    Operating Systems\\
+    Compiler Design
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+    % Column 3
+    Object Oriented Programming\\
+    Distributed Systems
+\end{minipage}
+\hfill
+\sectionSep
+
+% ----------- Volunteer Experience -----------
+
+\header{Volunteer Experience}
+
+\volunteerItem{GLUG}{Member}{Jul 2021 - Present}{
+    \item Helped in organizing Software Freedom Day event involving introduction of freshmen to Open Source , and Linux Installation Fest.
+}
+
+\bulletSep
+
+\end{document}
